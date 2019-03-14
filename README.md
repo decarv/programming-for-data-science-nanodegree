@@ -1,2 +1,2 @@
 # udacity-projects
-My repository for Udacity courses projects
+Personal repository for Udacity courses projects.
