@@ -6,33 +6,39 @@ Finally, for each of these top 10 paying customers, I would like to find out the
 
 /*Part 2*/
 										  
-WITH t1 AS (SELECT (first_name || ' ' || last_name) AS name, cr.customer_id, pt.amount, pt.payment_date
-FROM customer cr
-JOIN payment pt
-ON cr.customer_id = pt.customer_id),
+WITH t1 AS (SELECT (first_name || ' ' || last_name) AS name, 
+                   c.customer_id, 
+                   p.amount, 
+                   p.payment_date
+              FROM customer AS c
+                   JOIN payment AS p
+                    ON c.customer_id = p.customer_id),
 
-t2 AS (SELECT t1.customer_id
-FROM t1
-GROUP BY 1
-ORDER BY SUM(t1.amount) DESC
-LIMIT 10),
+     t2 AS (SELECT t1.customer_id
+              FROM t1
+             GROUP BY 1
+             ORDER BY SUM(t1.amount) DESC
+             LIMIT 10)
+
 
 t3 AS (SELECT t1.name,
-		DATE_PART('month', t1.payment_date) AS payment_month, 
-		DATE_PART('year', t1.payment_date) AS payment_year,
-		COUNT (*),
-		SUM(t1.amount) total,
-		LEAD(SUM(t1.amount)) OVER(PARTITION BY t1.name ORDER BY DATE_PART('month', t1.payment_date)) AS lead,
-		LEAD(SUM(t1.amount)) OVER(PARTITION BY t1.name ORDER BY DATE_PART('month', t1.payment_date)) - SUM(t1.amount) AS lead_dif
-FROM t1
-JOIN t2
-ON t1.customer_id = t2.customer_id
-WHERE t1.payment_date BETWEEN '20070101' AND '20080101'
-GROUP BY 1, 2, 3
-ORDER BY 1, 3, 2)
+              DATE_PART('month', t1.payment_date) AS payment_month, 
+              DATE_PART('year', t1.payment_date) AS payment_year,
+              COUNT (*),
+              SUM(t1.amount),
+              SUM(t1.amount) AS total,
+              LEAD(SUM(t1.amount)) OVER(PARTITION BY t1.name ORDER BY DATE_PART('month', t1.payment_date)) AS lead,
+              LEAD(SUM(t1.amount)) OVER(PARTITION BY t1.name ORDER BY DATE_PART('month', t1.payment_date)) - SUM(t1.amount) AS lead_dif
+         FROM t1
+              JOIN t2
+               ON t1.customer_id = t2.customer_id
+        WHERE t1.payment_date BETWEEN '20070101' AND '20080101'
+        GROUP BY 1, 2, 3
+        ORDER BY 1, 3, 2)
 
-SELECT t3.name, MAX(t3.lead_dif)
-FROM t3
-GROUP BY 1
-ORDER BY 2 DESC
-LIMIT 1;								
+SELECT t3.name, 
+       MAX(t3.lead_dif)
+  FROM t3
+ GROUP BY 1
+ ORDER BY 2 DESC
+ LIMIT 1;
