@@ -8,6 +8,8 @@ Question 2: Now we need to know how the length of rental duration of these famil
 Answer: The question is rather ambiguous about how one subset of data (duration of these family-friendly movies) should be compared to another subset of data (duration that all movies are rented for). As the first possible answer, the two groups could be plotted in a Histogram, which would provide a comparison of how the data is distributed in both datasets. As a third possible answer, a Histogram could provide a comparison of the average rental duration for each film. As the second possible answer, a Bar Chart or a Pie Chart could provide a comparison of the average rental duration for each film category. 
 */
 
+
+
 /* 1 */
 
 SELECT	*,
