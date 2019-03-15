@@ -18,10 +18,9 @@ WITH t1 AS (SELECT (first_name || ' ' || last_name) AS name,
               FROM t1
              GROUP BY 1
              ORDER BY SUM(t1.amount) DESC
-             LIMIT 10)
+             LIMIT 10),
 
-
-t3 AS (SELECT t1.name,
+     t3 AS (SELECT t1.name,
               DATE_PART('month', t1.payment_date) AS payment_month, 
               DATE_PART('year', t1.payment_date) AS payment_year,
               COUNT (*),
