@@ -1,3 +1,6 @@
+/* Udacity 1st project: Investigate a Relational Database */
+
+/* Question Set # 2 */
 
 /*
 Question 2
