@@ -12,7 +12,7 @@ store ID and count of rental orders fulfilled during that month.
 
 SELECT DATE_PART('month', r1.rental_date) AS rental_month, 
        DATE_PART('year', r1.rental_date) AS rental_year,
-       s1.store_id,
+       ('Store ' || s1.store_id) AS store,
        COUNT(*)
   FROM store AS s1
        JOIN staff AS s2
