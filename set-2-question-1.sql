@@ -17,9 +17,8 @@ SELECT DATE_PART('month', r1.rental_date) AS rental_month,
   FROM store AS s1
        JOIN staff AS s2
         ON s1.store_id = s2.store_id
-       JOIN payment p
-        ON s2.staff_id = p.staff_id
+		
        JOIN rental r1
-        ON r1.rental_id = p.rental_id
+        ON s2.staff_id = r1.staff_id
  GROUP BY 1, 2, 3
  ORDER BY 2, 1;
