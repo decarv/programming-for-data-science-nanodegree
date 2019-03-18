@@ -25,7 +25,7 @@ WITH t1 AS (SELECT DISTINCT c3.customer_id, p.rental_id
                  ON sub.country_id = c1.country_id),
 					
 t2 AS (SELECT c.name,
-              COUNT(r.rental_id) AS count_bycountry
+              COUNT(r.rental_id) AS count_top10
          FROM t1
               JOIN rental AS r
                ON r.rental_id = t1.rental_id
@@ -53,9 +53,9 @@ t3 AS (SELECT c.name,
         GROUP BY 1)
 		
 SELECT t2.name AS category,
-       t3.rental_count,
-	     t2.count_bycountry,
-       CAST(t2.count_bycountry*100 AS FLOAT)/t3.rental_count AS "proportion(%)"
+       t3.rental_count - t2.count_top10 AS other_countries,
+       t2.count_top10,
+       CAST(t2.count_top10*100 AS FLOAT)/t3.rental_count AS "proportion(%)"
   FROM t2
        JOIN t3
         ON t2.name = t3.name
