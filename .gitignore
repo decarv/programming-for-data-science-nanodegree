@@ -1,5 +1,5 @@
 .DS_Store
-.vscode/*
+.vscode
 washington.csv
 new_york_city.csv
 chicago.csv
