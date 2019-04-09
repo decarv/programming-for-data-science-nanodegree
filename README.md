@@ -1,4 +1,4 @@
-# udacity-projects
+# programming-for-data-science
 
 This is a personal repository for Udacity Programming For Data Science projects.
 
