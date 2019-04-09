@@ -50,8 +50,7 @@ def get_filters():
 
     print("\n\nLet's explore some US bikeshare data!\n")
 
-    print("Type\033[0;31;40m end\033[0;37;40m at any time if you would "
-          "like to exit the program.\n")
+    print("Type end at any time if you would like to exit the program.\n")
 
     while True:
         city = choice("\nFor what city(ies) do you want do select data, "
@@ -79,7 +78,7 @@ def get_filters():
 
 
 def load_data(city, month, day):
-    """Load data for the specified filters of city(ies), month(s) and 
+    """Load data for the specified filters of city(ies), month(s) and
        day(s) whenever applicable.
 
     Args:
@@ -108,7 +107,7 @@ def load_data(city, month, day):
     else:
         df = pd.read_csv(CITY_DATA[city])
 
-    # create columns to display statistics  
+    # create columns to display statistics
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['Month'] = df['Start Time'].dt.month
     df['Weekday'] = df['Start Time'].dt.weekday_name
@@ -136,7 +135,8 @@ def load_data(city, month, day):
 def time_stats(df):
     """Display statistics on the most frequent times of travel."""
 
-    print('\nDisplaying the statistics on the most frequent times of travel...\n')
+    print('\nDisplaying the statistics on the most frequent times of '
+          'travel...\n')
     start_time = time.time()
 
     # display the most common month
@@ -174,9 +174,12 @@ def station_stats(df):
     print("For the selected filters, the most common start end is: " +
           most_common_end_station)
 
-    # display most frequent combination of start station and end station trip
-    df['Start-End Combination'] = df['Start Station'] + ' - ' + df['End Station']
-    most_common_start_end_combination = str(df['Start-End Combination'].mode()[0])
+    # display most frequent combination of start station and
+    # end station trip
+    df['Start-End Combination'] = (df['Start Station'] + ' - ' +
+                                   df['End Station'])
+    most_common_start_end_combination = str(df['Start-End Combination']
+                                            .mode()[0])
     print("For the selected filters, the most common start-end combination "
           "of stations is: " + most_common_start_end_combination)
 
@@ -192,10 +195,14 @@ def trip_duration_stats(df):
 
     # display total travel time
     total_travel_time = df['Trip Duration'].sum()
-    total_travel_time = (str(int(total_travel_time//86400)) + 'd ' +
-                         str(int((total_travel_time % 86400)//3600)) + 'h ' +
-                         str(int(((total_travel_time % 86400) % 3600)//60)) + 'm ' +
-                         str(int(((total_travel_time % 86400) % 3600) % 60)) + 's')
+    total_travel_time = (str(int(total_travel_time//86400)) +
+                         'd ' +
+                         str(int((total_travel_time % 86400)//3600)) +
+                         'h ' +
+                         str(int(((total_travel_time % 86400) % 3600)//60)) +
+                         'm ' +
+                         str(int(((total_travel_time % 86400) % 3600) % 60)) +
+                         's')
     print('For the selected filters, the total travel time is : ' +
           total_travel_time + '.')
 
@@ -203,7 +210,7 @@ def trip_duration_stats(df):
     mean_travel_time = df['Trip Duration'].mean()
     mean_travel_time = (str(int(mean_travel_time//60)) + 'm ' +
                         str(int(mean_travel_time % 60)) + 's')
-    print("For the selected filters, the mean travel time is : " + 
+    print("For the selected filters, the mean travel time is : " +
           mean_travel_time + ".")
 
     print("\nThis took {} seconds.".format((time.time() - start_time)))
@@ -251,7 +258,7 @@ def user_stats(df, city):
 
 def raw_data(df, mark_place):
     """Display 5 line of sorted raw data each time."""
-    
+
     print("\nYou opted to view raw data.")
 
     # this variable holds where the user last stopped
@@ -260,7 +267,7 @@ def raw_data(df, mark_place):
                             "stopped last time? \n [y] Yes\n [n] No\n\n>")
         if last_place == 'n':
             mark_place = 0
-    
+
     # sort data by column
     if mark_place == 0:
         sort_df = choice("\nHow would you like to sort the way the data is "
@@ -271,7 +278,8 @@ def raw_data(df, mark_place):
                          ('st', 'et', 'td', 'ss', 'es', ''))
 
         asc_or_desc = choice("\nWould you like it to be sorted ascending or "
-                             "descending? \n [a] Ascending\n [d] Descending\n\n>",
+                             "descending? \n [a] Ascending\n [d] Descending"
+                             "\n\n>",
                              ('a', 'd'))
 
         if asc_or_desc == 'a':
