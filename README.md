@@ -6,23 +6,14 @@ This is a personal repository for Udacity Programming For Data Science projects.
 
 ### Overview
 
-This project consisted in the exploration of a provided database movie rentals. The student had to run SQL queries and build visualizations to showcase the output of the student's queries. For the presentation component, the student had to create four slides, and each should have (a) a question of interest, (b) a supporting SQL query needed to answer the question, (c) a supporting visualization created using the final data of the SQL queries that answer the questions of interest, and (d) a small summary on each slide.
+This project consisted in the exploration of a provided database movie rentals in which the student had to run SQL queries and build visualizations to showcase the output of the student's queries. 
+
+For the presentation component, the student had to create four slides, and each should have (a) a question of interest, (b) a supporting SQL query needed to answer the question, (c) a supporting visualization created using the final data of the SQL queries that answer the questions of interest, and (d) a small summary on each slide.
 
 ### Project Submission
 
-You can download the Project Submission [here](https://drive.google.com/open?id=1sfcOviwrgdNjnhghi6N4IOobMzDNGz4w).
-
-Question 1: How do the rentals for the 10 top renting countries compare to the other countries for each category? 
-* [Query](https://github.com/decarvalhohenrique/programming-for-data-science-nanodegree/blob/master/1st-project/1st-presentation-query.sql).
-
-Question 2: How are the movies distributed by the amount of times they were rented inside of a category? 
-* [Query](https://github.com/decarvalhohenrique/programming-for-data-science-nanodegree/blob/master/1st-project/2nd-presentation-query.sql).
-
-Question 3: How much did the top 10 paying customers spend on DVD rental over 2007? 
-* [Query](https://github.com/decarvalhohenrique/programming-for-data-science-nanodegree/blob/master/1st-project/3rd-presentation-query.sql).
-
-Question 4: How many customers have paid less in rentals compared to the previous month? 
-* [Query](https://github.com/decarvalhohenrique/programming-for-data-science-nanodegree/blob/master/1st-project/4th-presentation-query.sql).
+[Project Submission](https://drive.google.com/open?id=1sfcOviwrgdNjnhghi6N4IOobMzDNGz4w).
+You can find the queries [here](https://github.com/decarvalhohenrique/programming-for-data-science-nanodegree/blob/master/1st-project).
 
 ### Question Sets
 
@@ -49,7 +40,7 @@ The required filed for running this program are:
 * new_york_city.csv
 * chicago.csv
 
-You can download them [here](https://drive.google.com/open?id=1sfcOviwrgdNjnhghi6N4IOobMzDNGz4w).
+You can download the files [here](https://drive.google.com/open?id=1sfcOviwrgdNjnhghi6N4IOobMzDNGz4w).
 
 #### Requirements
 
