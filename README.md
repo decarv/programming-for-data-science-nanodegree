@@ -2,7 +2,7 @@
 
 This is a personal repository for Udacity Programming For Data Science projects.
 
-## 1st-project
+## 1st Project
 
 ### Overview
 
@@ -20,7 +20,7 @@ You can find the queries [here](https://github.com/decarvalhohenrique/programmin
 A set of questions have also been provided by Udacity so that we were free to consider and include them in our Project Submission. These were solely provided for our convenience, and we were able to choose between any of the questions in these sets or none at all in your project submission.Despite having not used any of the questions provided by Udacity, I still chose to query each [question](https://github.com/decarvalhohenrique/programming-for-data-science-nanodegree/tree/master/1st-project/set-questions).
 
 
-## 2nd-project
+## 2nd Project
 
 ### Overview
 
