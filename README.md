@@ -1,6 +1,8 @@
 # programming-for-data-science
 
-This is a personal repository for Udacity Programming For Data Science projects.
+## Henrique de Carvalho
+
+This repository contains projects for Udacity Programming For Data Science.
 
 ## Project 1
 
@@ -51,7 +53,5 @@ numpy==1.15.4
 Click==7.0
 
 
-![alt text](https://imgur.com/Mrlm25J)
-
-
+![Imgur](https://i.imgur.com/IK0uC6D.jpg)
 
