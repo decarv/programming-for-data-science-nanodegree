@@ -49,3 +49,9 @@ This program was written in Python (version 3.7.1) and relies on the following l
 pandas==0.23.4
 numpy==1.15.4
 Click==7.0
+
+
+![alt text](https://imgur.com/Mrlm25J)
+
+
+
