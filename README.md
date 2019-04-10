@@ -36,7 +36,7 @@ The developed CLI program allows the user to explore an US bikeshare system data
 
 #### Files Used
 
-The required filed for running this program are: 
+The required files for running this program are: 
 
 * washington.csv
 * new_york_city.csv
@@ -51,6 +51,16 @@ This program was written in Python (version 3.7.1) and relies on the following l
 pandas==0.23.4
 numpy==1.15.4
 Click==7.0
+
+## Project 3
+
+This project consisted in using Git and GitHub with a simulated workflow to refactor Project 2.
+
+### Project Submission
+
+The Project Submission consisted in the filling of a template with all the Git commands used to perform the requested tasks.
+
+[Project Submission](https://drive.google.com/open?id=10ZndqTVL3iDHoGx2lP8Rr7BmOK8noDh-).
 
 
 ![Imgur](https://i.imgur.com/IK0uC6D.jpg)
