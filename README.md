@@ -63,5 +63,5 @@ The Project Submission consisted in the filling of a template with all the Git c
 [Project Submission](https://drive.google.com/open?id=10ZndqTVL3iDHoGx2lP8Rr7BmOK8noDh-).
 
 
-![Imgur](https://i.imgur.com/IK0uC6D.jpg)
+<blockquote class="imgur-embed-pub" lang="en" data-id="o3nB1hu"><a href="https://imgur.com/o3nB1hu">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
